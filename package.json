@@ -1,0 +1,15 @@
+{
+    "name": "demo1",
+    "version": "0.1.0",
+    "main": "main.js",
+    "scripts": {
+        "build:all": "electron-packager . --all --overwrite",
+        "build:mac": "electron-packager ./ demo1--platform=darwin --arch=x64 --icon=./assets/img/demo1.icns --overwrite --out ./dist --version=0.37.8",
+        "build:win64": "electron-packager ./ demo1 --platform=win32 --arch=x64 --icon=./assets/img/demo1.png --overwrite --out ./dist --version=0.37.8",
+        "build:win32": "electron-packager ./ demo1 --platform=win32 --arch=ia32 --icon=./assets/img/demo1.png --overwrite --out ./dist --version=0.37.8 --app-version=1.0.0"
+    },
+    "devDependencies": {
+        "electron-package": "^0.1.0",
+        "electron": "~1.7.6"
+    }
+}
